@@ -1,9 +1,7 @@
 import express from 'express'
 import { User } from '../models/userSchema.js';
 import {
-  getAllUsers,
   getMyProfile,
-  // getSingleUser,
   login,
   logout,
   register,
@@ -12,7 +10,6 @@ import { isAuthenticated } from "../middlewares/auth.js";
 
 const router = express.Router();
 
-router.get("/all", getAllUsers);
 router.post("/new", register);
 router.post("/login", login);
 router.get("/logout", logout);
